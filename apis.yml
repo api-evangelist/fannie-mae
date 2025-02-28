@@ -3,6 +3,7 @@ apis: []
 name: Fannie Mae
 tags:
   - Federal Government
+  - Mortgages
 type: Contract
 image: https://kinlane-productions2.s3.amazonaws.com/apis-json-icons/apis-json.png
 common: []
