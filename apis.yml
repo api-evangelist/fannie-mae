@@ -32,9 +32,9 @@ common:
     url: https://www.fanniemae.com/newsroom
   - type: Careers
     url: https://www.fanniemae.com/careers
-  - type: Privacy Policy
+  - type: PrivacyPolicy
     url: https://www.fanniemae.com/privacy-statement
-  - type: Terms of Service
+  - type: TermsOfService
     url: https://www.fanniemae.com/terms-and-conditions
 description: >-
   Fannie Mae, officially known as the Federal National Mortgage Association, is
