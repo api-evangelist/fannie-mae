@@ -16,6 +16,10 @@ tags:
   - GSE
 apis: []
 common:
+  - type: GitHubOrganization
+    url: https://github.com/fanniemae
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/fanniemae
   - type: Website
     url: https://www.fanniemae.com/
   - type: Developer Portal
