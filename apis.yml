@@ -17,6 +17,8 @@ tags:
   - Fortune 100
 apis: []
 common:
+  - type: DomainSecurity
+    url: security/fannie-mae-domain-security.yml
   - type: GitHubOrganization
     url: https://github.com/fanniemae
   - type: LinkedIn
@@ -41,6 +43,8 @@ common:
     url: https://www.fanniemae.com/privacy-statement
   - type: TermsOfService
     url: https://www.fanniemae.com/terms-and-conditions
+  - url: https://www.fanniemae.com/newsroom
+    type: Blog
 description: >-
   Fannie Mae, officially known as the Federal National Mortgage Association, is
   a government-sponsored enterprise that plays a critical role in the American
