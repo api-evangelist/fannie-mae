@@ -1,0 +1,22 @@
+generated: '2026-09-07'
+method: searched
+source: >-
+  https://www.fanniemae.com/tech-guide (HTTP 200) and https://developer.fanniemae.com/ (HTTP 200);
+  no pricing page exists on any fanniemae.com host — searched the corporate sitemap
+  (https://www.fanniemae.com/sitemap.xml, 3,320 URLs) and the Developer Portal's shipped router,
+  which has no pricing route.
+note: >-
+  Fannie Mae publishes no API pricing. Access to Fannie Mae applications and their APIs is granted
+  under the Software Subscription Agreement (the Consolidated Technology Guide) to licensed sellers,
+  servicers and technology service providers; fees, where they apply, are set per application in
+  Schedules to that licensed contract and are not public. A free Developer Portal account can be
+  self-registered, but that is registration, not a plan.
+plan_count: 0
+currency: null
+pricing_url: null
+free_tier: null
+plans: []
+gaps:
+  - No public pricing page, plan table, or rate card for any Fannie Mae API.
+  - No machine-readable pricing or product catalog endpoint.
+  - Commercial terms live in the Software Subscription Agreement schedules, which are licensed documents.

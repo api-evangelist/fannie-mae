@@ -1,0 +1,75 @@
+generated: '2026-09-07'
+method: probed
+source: >-
+  scopes_supported from https://fmsso.fanniemae.com/.well-known/openid-configuration (HTTP 200,
+  fetched 2026-09-07; saved verbatim as well-known/fannie-mae-fmsso-openid-configuration.json)
+note: >-
+  These are the scopes Fannie Mae's own OAuth 2.0 / OpenID Connect authorization server advertises,
+  read from its published discovery document. Fannie Mae does NOT publish a scope reference page, and
+  no public OpenAPI declares per-operation security requirements, so the mapping of scope to API
+  operation is not public. Descriptions below marked `inferred: true` are our reading of the scope
+  name, not a Fannie Mae definition — nothing here is quoted from a Fannie Mae scopes document,
+  because no such document is published.
+authorization_server: https://fmsso.fanniemae.com
+docs: null
+docs_note: No public OAuth scope reference page was found on any fanniemae.com host.
+scope_count: 15
+scopes:
+  - name: openid
+    description: Standard OpenID Connect scope — requests an ID token.
+    inferred: false
+    standard: OpenID Connect Core 1.0
+  - name: profile
+    description: Standard OpenID Connect scope — basic profile claims.
+    inferred: false
+    standard: OpenID Connect Core 1.0
+  - name: email
+    description: Standard OpenID Connect scope — email claims.
+    inferred: false
+    standard: OpenID Connect Core 1.0
+  - name: address
+    description: Standard OpenID Connect scope — address claim.
+    inferred: false
+    standard: OpenID Connect Core 1.0
+  - name: phone
+    description: Standard OpenID Connect scope — phone claims.
+    inferred: false
+    standard: OpenID Connect Core 1.0
+  - name: idmz
+    description: >-
+      Requested by the Developer Portal client alongside openid and profile; observed in the live
+      302 to the authorization endpoint. Appears to scope access to the internet-DMZ external-party
+      surface.
+    inferred: true
+    observed_in_use: true
+  - name: api-int.fanniemae.com
+    description: >-
+      Host-named scope. Names an internal API gateway host (api-int.fanniemae.com does not resolve
+      publicly), which is direct evidence that Fannie Mae gates API access by target gateway.
+    inferred: true
+  - name: apigee_hostnamegroups
+    description: >-
+      Names Apigee hostname groups — evidence that the API gateway behind the developer program is
+      Apigee.
+    inferred: true
+  - name: treasuryapps
+    description: Scopes access to Fannie Mae treasury applications.
+    inferred: true
+  - name: pamfa
+    description: Application-specific scope; the application it names is not publicly documented.
+    inferred: true
+  - name: extfromint
+    description: External-from-internal federation scope.
+    inferred: true
+  - name: intextusers
+    description: Internal/external user directory scope.
+    inferred: true
+  - name: p1cintext
+    description: PingOne-cloud internal/external bridging scope.
+    inferred: true
+  - name: formloginonly
+    description: Restricts the authentication experience to form login.
+    inferred: true
+  - name: write:user
+    description: Write access to user records.
+    inferred: true

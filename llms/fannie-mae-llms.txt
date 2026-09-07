@@ -1,0 +1,97 @@
+# Fannie Mae
+
+> Fannie Mae (Federal National Mortgage Association) is a US government-sponsored enterprise that
+> buys mortgages from lenders to keep the secondary mortgage market liquid. It runs a Developer
+> Portal that exposes mortgage and housing data and workflow APIs to licensed lenders, servicers and
+> technology service providers.
+
+generated: 2026-09-07
+method: generated
+source: apis.yml plus the artifacts in this repository; every URL below was probed on 2026-09-07 and
+  its status recorded. Fannie Mae does not publish an llms.txt — /llms.txt returns 404 on
+  www.fanniemae.com, fanniemae.com and fmsso.fanniemae.com, and 403 (no such object) on
+  developer.fanniemae.com.
+
+## What you can and cannot reach
+
+Fannie Mae publishes **no public API contract**. There is no OpenAPI, no AsyncAPI, no GraphQL SDL, no
+Protobuf, no WSDL, no Postman collection and no MCP server at any public URL. The API catalog, the
+reference documentation and the specifications live inside the Developer Portal and require a
+registered account; an unauthenticated request to the portal's own data API 302s to the Fannie Mae
+single sign-on authorization server. Production API access is granted per application under the
+Software Subscription Agreement and administered through Technology Manager — it is not self-service.
+
+Do not attempt to call a Fannie Mae API without credentials. The enterprise gateway host
+(api.fanniemae.com) answers HTTP 400 to every anonymous request.
+
+## Developer surface
+
+- [Developer Portal](https://developer.fanniemae.com/): the API catalog, documentation and
+  specifications. Angular single-page app, hash-routed, account required for the catalog. (200)
+- [Get started](https://developer.fanniemae.com/#/get-started) (200)
+- [Support](https://developer.fanniemae.com/#/support) (200)
+- [Register for a Developer Portal account](https://auth.pingone.com/4c2b23f9-52b1-4f8f-aa1f-1d477590770c/saml20/idp/startsso?spEntityId=p1c-puma-GED-p1-saml-devportal-DirectRegistration) (200)
+- [Technology Manager](https://technologymanager.fanniemae.com/): where application entitlements are
+  administered. (200)
+
+## Authentication
+
+- Authorization server: `https://fmsso.fanniemae.com` (PingFederate), OAuth 2.0 + OpenID Connect.
+- [OpenID Connect discovery](https://fmsso.fanniemae.com/.well-known/openid-configuration) (200)
+- [OAuth authorization server metadata, RFC 8414](https://fmsso.fanniemae.com/.well-known/oauth-authorization-server) (200)
+- Grants: authorization_code (PKCE S256), client_credentials, refresh_token, device_code,
+  token_exchange, CIBA, JWT-bearer, SAML2-bearer.
+- Client auth: client_secret_basic/post/jwt, private_key_jwt, tls_client_auth (mTLS).
+- Repository artifacts: `authentication/fannie-mae-authentication.yml`,
+  `scopes/fannie-mae-scopes.yml`, `well-known/fannie-mae-well-known.yml`.
+
+## Terms, change history and status
+
+- [Consolidated Technology Guide](https://www.fanniemae.com/tech-guide): the Software Subscription
+  Agreement that governs external access to Fannie Mae applications and APIs. Current edition
+  effective 2026-04-30; each edition supersedes the prior one in full. (200)
+- Change history: Technology Guide Bulletins, numbered YY-NN and dated, issued ad hoc. PDF only, no
+  feed. See `changelog/fannie-mae-changelog.yml`.
+- [Technology Application Availability](https://singlefamily.fanniemae.com/applications-technology/technology-application-availability):
+  hours of availability, outages and planned maintenance, published per application rather than per
+  API. (403 to our crawler — Cloudflare bot challenge; the page is real.)
+- No SLA, no versioning policy, no deprecation policy, no Sunset/Deprecation headers.
+
+## Security
+
+- [Reporting a technology vulnerability](https://www.fanniemae.com/about-us/reporting-technology-vulnerability) (200)
+- [Vulnerability report form](https://www.fanniemae.com/form/report-technology-vulnerability) (200)
+- Incident contact published in DNS (CAA iodef): iso_support@fanniemae.com
+- No `/.well-known/security.txt` (404), no bug bounty, no trust center. The hackerone.com/fanniemae
+  page is HackerOne's community-curated directory entry, not a Fannie Mae program.
+- Domain posture: TLS 1.3, HSTS 180 days, SPF, DMARC p=reject, CAA pinned to Sectigo, no DNSSEC.
+  See `security/fannie-mae-domain-security.yml`.
+
+## Pricing
+
+No public pricing. Fees, where they apply, are set per application in Schedules to the Software
+Subscription Agreement. A free Developer Portal account can be self-registered; that is registration,
+not a plan. See `plans/fannie-mae-plans-pricing.yml`.
+
+## SDKs and packages
+
+None published. No first-party client library exists on npm, PyPI, RubyGems or GitHub; the
+github.com/fanniemae organization has zero public repositories. See
+`packages/fannie-mae-packages.yml`.
+
+## Company
+
+- [Website](https://www.fanniemae.com/) (200)
+- [Newsroom](https://www.fanniemae.com/newsroom) (200)
+- [Research and insights](https://www.fanniemae.com/research-and-insights) (200)
+- [Online privacy notice](https://www.fanniemae.com/about-us/corporate-governance/online-privacy-notice) (200)
+- [Legal disclosure](https://www.fanniemae.com/about-us/legal-disclosure) (200)
+- [LinkedIn](https://www.linkedin.com/company/fanniemae) (200)
+
+## Notes for agents
+
+- This profile is maintained by API Evangelist. It is not written or endorsed by Fannie Mae.
+- Nothing in this repository was obtained with credentials or by defeating an access control.
+- Three Fannie Mae hosts (singlefamily, multifamily, capitalmarkets) and the Developer Portal CMS sit
+  behind a Cloudflare bot challenge. Where a URL above is marked 403, the page exists and only our
+  crawler was turned away.

@@ -1,0 +1,24 @@
+generated: '2026-09-07'
+method: searched
+source: >-
+  https://developer.fanniemae.com/ (HTTP 200) and https://www.fanniemae.com/tech-guide (HTTP 200).
+  No public API reference exists to read limits from: the Developer Portal API catalog and its
+  documentation sit behind portal registration (an unauthenticated call to the portal's own data API
+  302s to https://fmsso.fanniemae.com/as/authorization.oauth2), and no OpenAPI is published on any
+  Fannie Mae host.
+note: >-
+  Honest zero. Fannie Mae almost certainly enforces limits at its Apigee gateway — the SSO
+  authorization server advertises an `apigee_hostnamegroups` scope and an `api-int.fanniemae.com`
+  scope — but no limit, window, burst, response header or exhaustion status code is published at a
+  public URL, and none could be observed because there is no anonymous endpoint to call
+  (api.fanniemae.com answers HTTP 400 from CloudFront on every path).
+limit_count: 0
+limits: []
+headers: []
+headers_note: >-
+  No X-RateLimit-*, RateLimit-* or Retry-After convention is documented. Unknown, not absent.
+exhaustion_status: null
+gaps:
+  - No published rate limits for any Fannie Mae API.
+  - No documented rate-limit response headers, so an agent has no runtime signal to back off on.
+  - No public endpoint to observe limits against.

@@ -1,0 +1,82 @@
+generated: '2026-09-07'
+method: searched
+source: https://www.fanniemae.com/tech-guide
+note: >-
+  Fannie Mae publishes no per-API release notes. What it does publish, on a public page, is a dated
+  and numbered change series for the contract that governs every external party's access to its
+  applications and APIs: the Consolidated Technology Guide (the Software Subscription Agreement) and
+  its accompanying Technology Guide Bulletins. Each Guide edition supersedes the prior one in full,
+  and each edition ships with a Bulletin summarising the content changes. Bulletins are issued ad
+  hoc, not on a schedule. Every entry below is a live, verified PDF or page URL; entry titles and
+  dates are quoted from the tech-guide page, and no change contents are summarised here because the
+  bulletins are PDF-only.
+scheme: >-
+  Guides are identified by effective date; Bulletins by a YY-NN number plus an issue date
+  (for example Bulletin 26-03, issued April 21, 2026).
+current:
+  document: Consolidated Technology Guide
+  effective: '2026-04-30'
+  url: https://www.fanniemae.com/media/document/pdf/consolidatedtechnologyguidepdf-0
+  accompanying_bulletin: Technology Guide Bulletin 26-03 (issued April 21, 2026)
+  accompanying_bulletin_url: https://www.fanniemae.com/media/document/pdf/techguidebulletinpdf
+cadence: ad hoc, as warranted — no predetermined publication schedule
+format: PDF
+machine_readable: false
+archive: https://www.fanniemae.com/tech-guide
+pre_consolidation_archive: https://www.fanniemae.com/pre-consolidation-technology-guide-components-related-bulletins-archive
+entry_count: 10
+entries:
+  - version: Bulletin 26-03
+    date: '2026-04-21'
+    kind: bulletin
+    title: Technology Guide Bulletin 26-03
+    url: https://www.fanniemae.com/media/document/pdf/techguidebulletinpdf
+    accompanies_guide_effective: '2026-04-30'
+  - version: Guide effective 2026-04-01
+    date: '2026-04-01'
+    kind: guide
+    title: Consolidated Technology Guide (effective April 1, 2026)
+    url: https://www.fanniemae.com/media/document/pdf/consolidated-technology-guideapril1-2026pdf
+  - version: Bulletin 26-02
+    date: '2026-03-10'
+    kind: bulletin
+    title: Technology Guide Bulletin 26-02
+    url: https://www.fanniemae.com/media/document/pdf/technologyguidebulletinmarch10-2026pdf
+  - version: Guide effective 2026-03-09
+    date: '2026-03-09'
+    kind: guide
+    title: Consolidated Technology Guide (effective March 9, 2026)
+    url: https://www.fanniemae.com/media/document/pdf/consolidated-technology-guidemarch9-2026pdf
+  - version: Bulletin 26-01
+    date: '2026-02-17'
+    kind: bulletin
+    title: Technology Guide Bulletin 26-01
+    url: https://www.fanniemae.com/media/document/pdf/technologyguidebulletinfebruary17-2026pdf
+  - version: Bulletin 25-03
+    date: '2025-11-25'
+    kind: bulletin
+    title: Technology Guide Bulletin 25-03
+    url: https://www.fanniemae.com/media/document/pdf/technologyguidebulletinnov25-2025pdf
+  - version: Guide effective 2025-12-23
+    date: '2025-12-23'
+    kind: guide
+    title: Consolidated Technology Guide (effective December 23, 2025)
+    url: https://www.fanniemae.com/media/document/pdf/consolidated-technology-guidedec23-2025pdf
+  - version: Guide effective 2025-08-12
+    date: '2025-08-12'
+    kind: guide
+    title: Consolidated Technology Guide (effective August 12, 2025)
+    url: https://www.fanniemae.com/media/document/pdf/consolidated-technology-guideaugust12-2025pdf
+  - version: Bulletin 25-02
+    date: '2025-04-17'
+    kind: bulletin
+    title: Technology Guide Bulletin 25-02
+    url: https://www.fanniemae.com/media/document/pdf/technologyguidebulletinapril17-2025pdf
+  - version: Bulletin 25-01
+    date: '2025-02-05'
+    kind: bulletin
+    title: Technology Guide Bulletin 25-01
+    url: https://www.fanniemae.com/media/document/pdf/technologyguidebulletinfebruary5-2025pdf
+gaps:
+  - No per-API changelog, release notes feed, or version history is published for any individual Fannie Mae API.
+  - The series is PDF-only; there is no RSS/Atom feed, no HTML changelog, and no machine-readable diff.

@@ -1,0 +1,310 @@
+generated: '2026-09-07'
+method: probed
+source: >-
+  Live anonymous HTTP probes (2026-09-07) of the five named /.well-known paths plus /llms.txt on every
+  host this record knows: the registrable domain and www, the developer portal host, the three business
+  line hosts, the enterprise API gateway host, the SSO host reached by following the portal's own 302,
+  and the four application hosts named in the portal's shipped runtime configuration.
+note: >-
+  One real document set was found, and it is not on the marketing site: fmsso.fanniemae.com — the
+  PingFederate authorization server that developer.fanniemae.com redirects to — serves a complete
+  OpenID Connect discovery document AND an RFC 8414 OAuth authorization server metadata document,
+  both application/json, both saved verbatim here. Everything else 404s. Two hosts
+  (technologymanager.fanniemae.com, datadynamics.fanniemae.com) answer HTTP 200 with the same
+  single-page-app HTML shell for EVERY /.well-known/* path; those are recorded as soft-200 misses,
+  not as served documents. The developer portal itself is a static S3/CloudFront origin that answers
+  403 AccessDenied for any key it does not hold, so its 403s are "no such object", not a refusal.
+  singlefamily/multifamily/capitalmarkets and the devportal CMS sit behind a Cloudflare bot
+  challenge; those rows record the challenge, not an absence.
+hosts:
+  - host: fmsso.fanniemae.com
+    role: SSO / OAuth 2.0 + OpenID Connect authorization server (PingFederate)
+    documents:
+      - path: /.well-known/openid-configuration
+        status: 200
+        content_type: application/json
+        file: fannie-mae-fmsso-openid-configuration.json
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        content_type: application/json
+        file: fannie-mae-fmsso-oauth-authorization-server.json
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /llms.txt
+        status: 404
+  - host: www.fanniemae.com
+    role: corporate website
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /llms.txt
+        status: 404
+  - host: fanniemae.com
+    role: registrable domain (redirects to www)
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /llms.txt
+        status: 404
+  - host: developer.fanniemae.com
+    role: Developer Portal (Angular SPA on S3 + CloudFront)
+    note: >-
+      403 AccessDenied with an application/xml S3 error body means the object does not exist in the
+      bucket; it is an absence, not an access refusal.
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+      - path: /.well-known/openid-configuration
+        status: 403
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+      - path: /.well-known/api-catalog
+        status: 403
+      - path: /.well-known/ai-plugin.json
+        status: 403
+      - path: /.well-known/agent-card.json
+        status: 403
+      - path: /.well-known/agent.json
+        status: 403
+      - path: /llms.txt
+        status: 403
+  - host: theexchange.fanniemae.com
+    role: alternate alias of the Developer Portal (named in the portal's own runtime config)
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+      - path: /.well-known/openid-configuration
+        status: 403
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+      - path: /.well-known/api-catalog
+        status: 403
+      - path: /.well-known/ai-plugin.json
+        status: 403
+      - path: /.well-known/agent-card.json
+        status: 403
+      - path: /.well-known/agent.json
+        status: 403
+      - path: /llms.txt
+        status: 403
+  - host: api.fanniemae.com
+    role: >-
+      enterprise API gateway (CNAME enterpriseapi.fotgw.essp.prod.fanniemae.com, fronted by CloudFront)
+    note: >-
+      Every path returns HTTP 400 with an empty body and an "Error from cloudfront" x-cache header —
+      the distribution has no matching alternate domain name for anonymous callers. No anonymous
+      surface, so nothing to record beyond the status.
+    documents:
+      - path: /.well-known/security.txt
+        status: 400
+      - path: /.well-known/openid-configuration
+        status: 400
+      - path: /.well-known/oauth-authorization-server
+        status: 400
+      - path: /.well-known/oauth-protected-resource
+        status: 400
+      - path: /.well-known/api-catalog
+        status: 400
+      - path: /.well-known/ai-plugin.json
+        status: 400
+      - path: /.well-known/agent-card.json
+        status: 400
+      - path: /.well-known/agent.json
+        status: 400
+      - path: /llms.txt
+        status: 400
+  - host: singlefamily.fanniemae.com
+    role: Single-Family business line (carries the public API landing pages)
+    note: Cloudflare bot challenge answered instead of the page; the 403 is the challenge, not an absence.
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /llms.txt
+        status: 404
+  - host: multifamily.fanniemae.com
+    role: Multifamily business line
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /llms.txt
+        status: 404
+  - host: capitalmarkets.fanniemae.com
+    role: Capital Markets business line
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /llms.txt
+        status: 404
+  - host: technologymanager.fanniemae.com
+    role: Technology Manager (partner entitlement application)
+    note: >-
+      SOFT-200. Every path returns HTTP 200 text/html with the identical 11,519-byte SPA shell.
+      No document is served; these are misses.
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        served: false
+        body: html-spa-shell
+      - path: /.well-known/openid-configuration
+        status: 200
+        served: false
+        body: html-spa-shell
+      - path: /.well-known/api-catalog
+        status: 200
+        served: false
+        body: html-spa-shell
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        served: false
+        body: html-spa-shell
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        served: false
+        body: html-spa-shell
+      - path: /.well-known/agent-card.json
+        status: 200
+        served: false
+        body: html-spa-shell
+      - path: /.well-known/agent.json
+        status: 200
+        served: false
+        body: html-spa-shell
+      - path: /llms.txt
+        status: 200
+        served: false
+        body: html-spa-shell
+  - host: datadynamics.fanniemae.com
+    role: Data Dynamics (credit risk transfer / loan performance data application)
+    note: SOFT-200. Identical 5,458-byte SPA shell on every path. Misses.
+    documents:
+      - path: /.well-known/security.txt
+        status: 200
+        served: false
+        body: html-spa-shell
+      - path: /.well-known/openid-configuration
+        status: 200
+        served: false
+        body: html-spa-shell
+      - path: /.well-known/api-catalog
+        status: 200
+        served: false
+        body: html-spa-shell
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        served: false
+        body: html-spa-shell
+      - path: /.well-known/ai-plugin.json
+        status: 200
+        served: false
+        body: html-spa-shell
+      - path: /.well-known/agent-card.json
+        status: 200
+        served: false
+        body: html-spa-shell
+      - path: /.well-known/agent.json
+        status: 200
+        served: false
+        body: html-spa-shell
+      - path: /llms.txt
+        status: 200
+        served: false
+        body: html-spa-shell
+  - host: connect.fanniemae.com
+    role: Fannie Mae Connect (reporting application)
+    note: 403 on every path from the application edge.
+    documents:
+      - path: /.well-known/security.txt
+        status: 403
+      - path: /.well-known/openid-configuration
+        status: 403
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+      - path: /.well-known/api-catalog
+        status: 403
+      - path: /.well-known/ai-plugin.json
+        status: 403
+      - path: /.well-known/agent-card.json
+        status: 403
+      - path: /.well-known/agent.json
+        status: 403
+      - path: /llms.txt
+        status: 403
+summary:
+  hosts_probed: 12
+  documents_served: 2
+  security_txt: false
+  api_catalog: false
+  agent_card: false
+  llms_txt: false
+  openid_configuration: true
+  oauth_authorization_server: true

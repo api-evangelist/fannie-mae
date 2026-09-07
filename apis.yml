@@ -28,7 +28,7 @@ type: Index
 access: 3rd-Party
 position: Consuming
 created: '2024-12-25'
-modified: '2026-04-28'
+modified: '2026-09-07'
 specificationVersion: '0.23'
 tags:
   - Federal-Government
@@ -69,11 +69,47 @@ common:
   - type: Careers
     url: https://www.fanniemae.com/careers
   - type: PrivacyPolicy
-    url: https://www.fanniemae.com/privacy-statement
+    url: https://www.fanniemae.com/about-us/corporate-governance/online-privacy-notice
   - type: TermsOfService
-    url: https://www.fanniemae.com/terms-and-conditions
+    url: https://www.fanniemae.com/about-us/legal-disclosure
   - url: https://www.fanniemae.com/newsroom
     type: Blog
+  - type: Documentation
+    url: https://singlefamily.fanniemae.com/applications-technology/application-programming-interfaces-apis-developer-portal
+  - type: GettingStarted
+    url: https://developer.fanniemae.com/#/get-started
+  - type: Support
+    url: https://developer.fanniemae.com/#/support
+  - type: SignUp
+    url: https://auth.pingone.com/4c2b23f9-52b1-4f8f-aa1f-1d477590770c/saml20/idp/startsso?spEntityId=p1c-puma-GED-p1-saml-devportal-DirectRegistration
+  - type: StatusPage
+    url: https://singlefamily.fanniemae.com/applications-technology/technology-application-availability
+  - type: TermsOfUse
+    url: https://www.fanniemae.com/tech-guide
+  - type: Authentication
+    url: authentication/fannie-mae-authentication.yml
+  - type: OAuthScopes
+    url: scopes/fannie-mae-scopes.yml
+  - type: OpenIDConnect
+    url: https://fmsso.fanniemae.com/.well-known/openid-configuration
+  - type: WellKnown
+    url: well-known/fannie-mae-well-known.yml
+  - type: Conformance
+    url: conformance/fannie-mae-conformance.yml
+  - type: VulnerabilityDisclosure
+    url: security/fannie-mae-vulnerability-disclosure.yml
+  - type: Security
+    url: security/fannie-mae-vulnerability-disclosure.yml
+  - type: ChangeLog
+    url: changelog/fannie-mae-changelog.yml
+  - type: Lifecycle
+    url: lifecycle/fannie-mae-lifecycle.yml
+  - type: LLMsTxt
+    url: llms/fannie-mae-llms.txt
+  - type: Plans
+    url: plans/fannie-mae-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/fannie-mae-rate-limits.yml
 description: >-
   Fannie Mae, officially known as the Federal National Mortgage Association, is
   a government-sponsored enterprise that plays a critical role in the American
@@ -87,3 +123,8 @@ description: >-
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
+x-enrichment:
+  date: '2026-09-07'
+  status: enriched
+  artifacts_added: 13
+  pass: local-v3

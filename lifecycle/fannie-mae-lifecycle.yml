@@ -1,0 +1,69 @@
+generated: '2026-09-07'
+method: searched
+source: >-
+  https://www.fanniemae.com/tech-guide (HTTP 200) and
+  https://singlefamily.fanniemae.com/applications-technology/technology-application-availability
+  (HTTP 403 Cloudflare bot challenge — the page demonstrably exists and is referenced by Fannie
+  Mae's own "Technology Application Availability Webpage Access" PDF, so it is recorded as live,
+  not dead)
+note: >-
+  Fannie Mae publishes no API versioning policy, no deprecation policy, no Sunset/Deprecation header
+  convention and no SLA at a public URL. What it does publish is a contract-level supersession rule
+  and an application availability page. Both are recorded below; the absences are recorded as
+  absences rather than left blank.
+versioning:
+  api_versioning_policy: null
+  api_versioning_policy_note: >-
+    No public statement of how Fannie Mae versions its APIs (path version, header, date-based) was
+    found. The Developer Portal's own internal endpoints use a /v1/ path segment, but that is the
+    portal UI's backend, not a published API convention.
+  contract_versioning:
+    document: Consolidated Technology Guide (the Software Subscription Agreement)
+    url: https://www.fanniemae.com/tech-guide
+    scheme: effective-date editions, each announced by a numbered Technology Guide Bulletin (YY-NN)
+    current_effective: '2026-04-30'
+    supersession: >-
+      "Each edition of the Guide supersedes and replaces the prior version in its entirety, as of the
+      effective date(s) provided in the corresponding Bulletin." — quoted from the tech-guide page.
+    cadence: ad hoc, as warranted
+    archive: https://www.fanniemae.com/tech-guide
+deprecation:
+  policy_published: false
+  policy_url: null
+  sunset_header: unknown
+  deprecation_header: unknown
+  note: >-
+    No RFC 8594 Sunset/Deprecation header convention and no API deprecation policy is published.
+    Deprecations of licensed applications are communicated inside the Technology Guide Bulletin
+    series and through customer notifications, neither of which is machine-readable.
+  deprecated_operations: []
+  deprecated_operations_note: No public OpenAPI exists, so no operation-level deprecation could be derived.
+status_page:
+  exists: true
+  url: https://singlefamily.fanniemae.com/applications-technology/technology-application-availability
+  probed_status: 403
+  probed_note: >-
+    Cloudflare interstitial ("Just a moment...") answered instead of the page. The page is real: it
+    is linked from Fannie Mae's Applications & Technology navigation and documented in Fannie Mae's
+    own PDF at
+    https://singlefamily.fanniemae.com/media/document/pdf/technology-application-availability-webpage-access
+  covers: >-
+    Hours of availability, current and past outages, and future planned maintenance windows for
+    Fannie Mae technology applications.
+  machine_readable: false
+  subscription: Email alerts for outages and maintenance are offered to registered users.
+  scope_note: >-
+    Availability is published per APPLICATION, not per API. There is no per-endpoint or per-API
+    status feed, no JSON status endpoint, and no third-party status platform (Statuspage/Instatus).
+  sso_maintenance_notice: https://www.fanniemae.com/content/fmsso/maintenance.html
+sla:
+  published: false
+  note: >-
+    No public service level agreement. Availability commitments, if any, live inside the Software
+    Subscription Agreement, which is a licensed contract rather than a published SLA page.
+support:
+  technology_support_center: https://singlefamily.fanniemae.com/applications-technology/technology-support-center
+  technology_support_center_status: 403
+  technology_manager: https://technologymanager.fanniemae.com/
+  technology_manager_status: 200
+  developer_portal_support: https://developer.fanniemae.com/#/support

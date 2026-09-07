@@ -1,0 +1,34 @@
+generated: '2026-09-07'
+method: searched
+source: >-
+  registry.npmjs.org search "fanniemae" (0 results), pypi.org/pypi/fanniemae/json and
+  pypi.org/pypi/fannie-mae/json (both 404), rubygems.org/api/v1/gems/fanniemae.json (404),
+  api.github.com/orgs/fanniemae/repos (HTTP 200, 0 public repositories), and the Developer Portal
+  at https://developer.fanniemae.com/ (HTTP 200), probed 2026-09-07.
+note: >-
+  No first-party Fannie Mae client library was found in any public package registry, and the
+  github.com/fanniemae organization exists but publishes zero public repositories. If Fannie Mae
+  ships SDKs, they are distributed inside the registration-gated Developer Portal and are not
+  discoverable or installable from a public registry. Recorded as a checked zero, not as
+  "not checked" — nothing here is a guess.
+package_count: 0
+official_sdk_count: 0
+packages: []
+registries_checked:
+  - registry: npm
+    query: fanniemae
+    endpoint: https://registry.npmjs.org/-/v1/search?text=fanniemae
+    result_count: 0
+  - registry: pypi
+    endpoint: https://pypi.org/pypi/fanniemae/json
+    status: 404
+  - registry: pypi
+    endpoint: https://pypi.org/pypi/fannie-mae/json
+    status: 404
+  - registry: rubygems
+    endpoint: https://rubygems.org/api/v1/gems/fanniemae.json
+    status: 404
+  - registry: github
+    endpoint: https://api.github.com/orgs/fanniemae/repos
+    status: 200
+    public_repo_count: 0
