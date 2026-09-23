@@ -1,7 +1,9 @@
 ---
 title: Fannie Mae Launches AI Fraud Detection Technology ...
 url: https://www.fanniemae.com/newsroom/fannie-mae-news/fannie-mae-launches-ai-fraud-detection-technology-partnership-palantir
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Fannie Mae" press release artificial intelligence'
 position: 1
 source: serpapi-google

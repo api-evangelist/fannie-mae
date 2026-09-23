@@ -1,7 +1,9 @@
 ---
 title: Special Topics Archive
 url: https://www.fanniemae.com/data-and-insights/surveys-indices/special-topics/special-topics-archive
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Fannie Mae" press release artificial intelligence'
 position: 3
 source: serpapi-google

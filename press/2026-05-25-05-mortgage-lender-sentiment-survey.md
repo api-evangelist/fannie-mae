@@ -1,7 +1,9 @@
 ---
 title: Mortgage Lender Sentiment Survey
 url: https://www.fanniemae.com/data-and-insights/surveys/mortgage-lender-sentiment-survey
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Fannie Mae" press release artificial intelligence'
 position: 5
 source: serpapi-google

@@ -1,7 +1,9 @@
 ---
 title: FHFA 2025 AI Compliance Plan
 url: https://www.fhfa.gov/reports/fhfa-ai-compliance-plan/2025
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Fannie Mae" press release artificial intelligence'
 position: 4
 source: serpapi-google
