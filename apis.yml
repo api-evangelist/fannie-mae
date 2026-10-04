@@ -31,14 +31,12 @@ created: '2024-12-25'
 modified: '2026-09-07'
 specificationVersion: '0.23'
 tags:
-  - Federal-Government
   - Housing
   - Mortgage
   - Finance
-  - GSE
+  - Government-Sponsored Enterprise
   - Fortune 100
 tags_raw:
-  - Federal Government
   - Housing
   - Mortgages
   - Finance
@@ -128,3 +126,5 @@ x-enrichment:
   status: enriched
   artifacts_added: 13
   pass: local-v3
+x-tags-removed:
+- Federal Government
