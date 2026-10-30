@@ -1,4 +1,4 @@
-# Fannie Mae (fannie-mae)
+# Fannie Mae
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,42 +66,106 @@
 
 Fannie Mae, officially known as the Federal National Mortgage Association, is a government-sponsored enterprise that plays a critical role in the American housing market. Established in 1938, Fannie Mae operates as a secondary mortgage lender, purchasing mortgages from banks and other financial institutions. By buying these loans, Fannie Mae helps to provide liquidity to the mortgage market, enabling banks to lend more money to homebuyers. Fannie Mae operates a developer portal that hosts API integrations for mortgage industry partners; access typically requires authenticated business relationships.
 
-**URL:** [Visit APIs.json URL](https://raw.githubusercontent.com/api-evangelist/fannie-mae/refs/heads/main/apis.yml)
+**Areas:** Housing · Mortgage · Finance · Government-Sponsored Enterprise · Fortune 100
 
-## Scope
+## Fannie Mae on APIs.io
 
-- **Type:** Index
-- **Position:** Consumer
-- **Access:** 3rd-Party
+Everything profiled for Fannie Mae is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/fannie-mae/](https://apis.io/providers/fannie-mae/)** — or go straight to one of the APIs or properties below.
 
-## Tags:
+### Published properties
 
- - Federal Government, Housing, Mortgages, Finance, GSE
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### Security (3)
 
-- **Created:** 2024-12-25
-- **Modified:** 2026-04-28
+Authentication, trust centre, and vulnerability disclosure.
 
-## APIs
+- [Fannie Mae Authentication](https://apis.io/security/fannie-mae/fannie-mae-authentication/)
+- [Fannie Mae Domain Security](https://apis.io/security/fannie-mae/fannie-mae-domain-security/)
+- [Fannie Mae Vulnerability Disclosure](https://apis.io/security/fannie-mae/fannie-mae-vulnerability-disclosure/)
 
-No public, openly documented APIs are catalogued at this time. Fannie Mae publishes APIs through partner-restricted channels via its developer portal.
+#### OAuth scopes (1)
 
-## Common Properties
+The permissions the API asks for.
+
+- [Fannie Mae Scopes](https://apis.io/scopes/fannie-mae/fannie-mae-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Fannie Mae Plans Pricing](https://apis.io/plans/fannie-mae/fannie-mae-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Fannie Mae Rate Limits](https://apis.io/rate-limits/fannie-mae/fannie-mae-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://www.fanniemae.com/)
-- [Developer Portal](https://developer.fanniemae.com/)
-- [Single-Family Business](https://singlefamily.fanniemae.com/)
-- [Multifamily Business](https://multifamily.fanniemae.com/)
-- [Capital Markets](https://capitalmarkets.fanniemae.com/)
-- [Data and Insights](https://www.fanniemae.com/research-and-insights)
-- [News](https://www.fanniemae.com/newsroom)
-- [Careers](https://www.fanniemae.com/careers)
-- [Privacy Policy](https://www.fanniemae.com/privacy-statement)
-- [Terms of Service](https://www.fanniemae.com/terms-and-conditions)
+- [Documentation](https://singlefamily.fanniemae.com/applications-technology/application-programming-interfaces-apis-developer-portal)
+- [Getting started](https://developer.fanniemae.com/#/get-started)
+- [Sign up](https://auth.pingone.com/4c2b23f9-52b1-4f8f-aa1f-1d477590770c/saml20/idp/startsso?spEntityId=p1c-puma-GED-p1-saml-devportal-DirectRegistration)
+- [Support](https://developer.fanniemae.com/#/support)
+- [Blog](https://www.fanniemae.com/newsroom)
+- [Terms of service](https://www.fanniemae.com/about-us/legal-disclosure)
+- [Privacy policy](https://www.fanniemae.com/about-us/corporate-governance/online-privacy-notice)
+- [GitHub](https://github.com/fanniemae)
+- [Status](https://singlefamily.fanniemae.com/applications-technology/technology-application-availability)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
+**Kin Score 32.8** — thin · rubric 0.24.0 · scored 2026-10-17
 
-**Email:** kin@apievangelist.com
+| Facet | Score |
+|---|---|
+| Discoverability | 56.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 44.7 |
+| Developer ergonomics | 41.7 |
+| Access clarity | 34.2 |
+
+**Agent readiness 20.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+
+**Regulatory alignment 40.2** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/fannie-mae/](https://apis.io/providers/fannie-mae/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Fannie Mae: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/fannie-mae/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
